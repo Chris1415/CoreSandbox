@@ -4,32 +4,36 @@
     $('.Textbox').matchHeight();
 
     /* AJAX AND SESSION*/
-    function Search(page, url) {
+    function Search(page) {
+        var backendUrl = "/SearchPageAjaxSession/GetSearchResults";
         $.ajax({
-            url: url + page,
+            url: backendUrl,
+            data: { "Page": page }
         }).done(function (data) {
-            $("#ResultsWrapper").html(data);         
+            $("#ResultsWrapper").html(data);
         });
     }
 
     // Normal CLick Handling
-    $('body').on('click','.pageLinkAjax',function(){
+    $('body').on('click', '.pageLinkAjax', function () {
         var newPage = $(this).attr("pageNumber");
-        Search(newPage, "/SearchPageAjax/GetSearchResults?Page=");
+        Search(newPage);
     });
 
     // Session Click Handling
     $('body').on('click', '.pageLinkAjaxSession', function () {
         var newPage = $(this).attr("pageNumber");
-        Search(newPage, "/SearchPageAjaxSession/GetSearchResults?Page=");
+        Search(newPage);
     });
 
     /* ENDE AJAX */
 
     /* AJAX History Push*/
     function SearchHistoryPush(page) {
+        var backendurl = "/SearchPageAjaxHistoryPush/GetSearchResults";
         $.ajax({
-            url: "/SearchPageAjaxHistoryPush/GetSearchResults?Page=" + page,
+            url: backendurl,
+            data: { "Page": page }
         }).done(function (data) {
             $("#ResultsWrapper").html(data);
             if (history.pushState) {
@@ -51,8 +55,7 @@
 
     /* QUERY PARAMETER */
 
-    $(".pageLinkQuery").click(function ()
-    {
+    $(".pageLinkQuery").click(function () {
         var newPage = $(this).attr("pageNumber");
         var params = { page: newPage };
         var urlParams = $.param(params);
