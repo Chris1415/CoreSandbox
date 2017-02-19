@@ -1,0 +1,22 @@
+﻿@using SandBox.Core.Models
+@model IDummySearchResultModel
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="text-center">
+            @Html.Partial("~/Views/Components/Pager/Default.cshtml", new Tuple<IPagingModel, string>(Model.Paging, "pageLinkQuery"))
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    @Html.Partial("~/Views/Components/DummySearchResult/Default.cshtml", Model.SearchResults)
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="text-center">
+           @Html.Partial("~/Views/Components/Pager/Default.cshtml", new Tuple<IPagingModel, string>(Model.Paging, "pageLinkQuery"))
+        </div>
+    </div>
+</div>

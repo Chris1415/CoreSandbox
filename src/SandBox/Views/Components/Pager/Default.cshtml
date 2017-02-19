@@ -1,0 +1,23 @@
+﻿@using SandBox.Core.Models
+@model Tuple<IPagingModel, string>
+
+<ul class="pagination">
+    @if (Model.Item1.Previous != null)
+    {
+        <li>
+            <a class="@Model.Item2" pageNumber="@Model.Item1.Previous.PageNumber">@Html.Raw(Model.Item1.Previous.Text)</a>
+        </li>
+    }
+    @foreach (IPageElement pageElement in Model.Item1.Elements)
+    {
+        <li>
+            <a class="@Model.Item2 @(pageElement.IsActive ? "active" : string.Empty)" pageNumber="@pageElement.PageNumber" >@pageElement.Text</a>
+        </li>
+    }
+    @if (Model.Item1.Next != null)
+    {
+        <li>
+            <a class="@Model.Item2" pageNumber="@Model.Item1.Next.PageNumber">@Html.Raw(Model.Item1.Next.Text)</a>
+        </li>
+    }
+</ul>

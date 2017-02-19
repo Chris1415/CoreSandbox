@@ -1,0 +1,19 @@
+﻿@using SandBox.Core.Models
+@model IEnumerable<IDummyContentModel>
+
+@foreach (IDummyContentModel result in Model)
+{
+    <div class="col-md-12">
+        <div class="resultItem">
+            <h2>@result.Title</h2>
+            <div>@result.Text</div>
+            <div>
+                <img src="@result.Image" alt="" />
+            </div>
+            <p>
+                <a href="@result.Link">Details</a>
+            </p>
+
+        </div>
+    </div>
+}

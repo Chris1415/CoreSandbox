@@ -1,0 +1,32 @@
+﻿@using SandBox.Core.Models
+@using SandBox.ViewComponents
+@model IDummySearchResultModel
+
+
+<h1>Search Page Ajax</h1>
+
+<div class="row">
+    <div class="col-md-12">
+        @(await Component.InvokeAsync<StageSliderViewComponent>())
+    </div>
+    <div class="col-md-6">
+        @Html.Partial("~/Views/SearchPageAjax/Partials/Pros.cshtml")
+    </div>
+    <div class="col-md-6">
+        @Html.Partial("~/Views/SearchPageAjax/Partials/Cons.cshtml")
+    </div>
+</div>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-9">
+        <div id="ResultsWrapper">
+            @Html.Partial("~/Views/SearchPageAjax/Partials/SearchResults.cshtml")
+        </div>
+    </div>
+    <div class="col-md-3">
+        @(await Component.InvokeAsync<ContactViewComponent>())
+        @(await Component.InvokeAsync<ContactViewComponent>())
+    </div>
+</div>

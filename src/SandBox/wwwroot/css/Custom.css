@@ -1,0 +1,62 @@
+﻿.resultItem {
+    border: solid;
+    border-color: black;
+    background-color: lightblue;
+    margin-bottom: 5px;
+}
+
+    .resultItem h2 {
+        text-align: center;
+    }
+
+.carousel {
+    margin-bottom: 10px;
+}
+
+.contact {
+    border: solid;
+    border-color: black;
+    background-color: lightcoral;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+    .contact div {
+        margin-bottom: 10px;
+    }
+
+
+    .contact p {
+        display: inline;
+    }
+
+.OverViewLinks div {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.Textbox {
+    border: solid;
+    border-color: black;
+    background-color: Highlight;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+    .Textbox ul {
+        list-style: none;
+    }
+
+    .Textbox.pro li:before {
+        content: "+";
+        margin-right: 4px;
+    }
+
+    .Textbox.con li:before {
+        content: "-";
+        margin-right: 4px;
+    }
+
+    .Textbox h3 {
+        font-weight: bold;
+    }

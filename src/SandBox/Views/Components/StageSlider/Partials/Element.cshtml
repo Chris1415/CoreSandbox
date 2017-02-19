@@ -1,0 +1,10 @@
+﻿@model Tuple<string,string, bool>
+
+<div class="item @(Model.Item3 ? "active" : string.Empty)">
+    <img src="@Model.Item1" alt="ASP.NET" class="img-responsive" />
+    <div class="carousel-caption" role="option">
+        <p>
+            @Model.Item2
+        </p>
+    </div>
+</div>

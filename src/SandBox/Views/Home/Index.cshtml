@@ -1,0 +1,22 @@
+﻿@using SandBox.ViewComponents
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        @(await Component.InvokeAsync<StageSliderViewComponent>())
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>Search</h2>
+        @Html.Partial("~/Views/SearchOverviewPage/Partials/Links.cshtml")
+    </div>
+    <div class="col-md-6">
+        <h2>Google Maps</h2>
+    </div>
+</div>

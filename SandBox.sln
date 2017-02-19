@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3922BAD7-48A5-482C-AB96-B753E21E1359}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6B802A44-121D-4A98-BEC3-98A3CA06E8FD}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SandBox", "src\SandBox\SandBox.xproj", "{1BCA58EC-E266-4D68-9D79-B6CBCF4C41D9}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SandBox.Core", "src\SandBox.Core\SandBox.Core.xproj", "{EABA6DF5-A313-4D04-B646-9ECFC2910E5B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BCA58EC-E266-4D68-9D79-B6CBCF4C41D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BCA58EC-E266-4D68-9D79-B6CBCF4C41D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BCA58EC-E266-4D68-9D79-B6CBCF4C41D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BCA58EC-E266-4D68-9D79-B6CBCF4C41D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EABA6DF5-A313-4D04-B646-9ECFC2910E5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EABA6DF5-A313-4D04-B646-9ECFC2910E5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EABA6DF5-A313-4D04-B646-9ECFC2910E5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EABA6DF5-A313-4D04-B646-9ECFC2910E5B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1BCA58EC-E266-4D68-9D79-B6CBCF4C41D9} = {3922BAD7-48A5-482C-AB96-B753E21E1359}
+		{EABA6DF5-A313-4D04-B646-9ECFC2910E5B} = {3922BAD7-48A5-482C-AB96-B753E21E1359}
+	EndGlobalSection
+EndGlobal
